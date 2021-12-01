@@ -21,6 +21,3 @@ echo ""===============================================================""
 echo " "
 
 cat ~/.ssh/id_ed25519.pub
-
-# Testing my SSH connection:
-# ssh -T git@github.com
