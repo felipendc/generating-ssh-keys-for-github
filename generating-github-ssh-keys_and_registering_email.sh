@@ -1,13 +1,9 @@
 #!/bin/bash
-# Script automated by Felipe Ndc aka Vicyos
+# Script automated by Felipe Ndc 
 
-
-# Asking for the user email:
-echo "Enter your email:"
-read email
 
 # Doing the MAGIC under the hood:
-ssh-keygen -t ed25519 -C $email
+ssh-keygen -t ed25519 -C "felipendc10@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 
@@ -20,4 +16,12 @@ echo "3) Then, give it a title and paste the key in the key field."
 echo ""===============================================================""
 echo " "
 
+# Registering my personal email:
+git config --global user.name "felipendc"
+git config --global user.email "felipendc10@gmail.com"
+
+# Copy Github generated key:
 cat ~/.ssh/id_ed25519.pub
+
+# Close script after user presses any key:
+read -p 'Hit ENTER to exit'
